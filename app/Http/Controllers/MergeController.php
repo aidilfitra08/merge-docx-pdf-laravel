@@ -45,6 +45,7 @@ class MergeController extends Controller
         // array_splice($pdfFiles, 1, 0, $newData);
         // $newData2 = storage_path('app/basic_data') . '/hayo2.pdf';
         // $pdfFiles[] = $newData2;
+
         // ✅ Merge PDFs using FPDI
         $mergedFile = $outputDir . '/merged-' . time() . '.pdf';
         $pdf = new Fpdi();
