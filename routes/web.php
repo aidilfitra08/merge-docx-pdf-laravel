@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MergeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/upload', function () {
+    return view('upload');
+});
+
+Route::post('/convert', [MergeController::class, 'merge'])->name('merge');
